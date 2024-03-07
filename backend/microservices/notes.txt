@@ -1,0 +1,25 @@
+- Microservices (It is an architecture)
+    1. Loosely coupled
+    2. Each can be independently developed and maintained
+    3. Different languages can be used for different services
+    4. Can use different architecture as well
+
+Why Microservices?
+    1. Scalability issues
+    2. Problem in one won't affect other services
+
+
+Issues
+    Communication between Microservices
+    Can require high resources ,high investment
+
+
+Communication Between Microservices
+    1. Synchronous - HTTP calls via REST api
+    2. Asynchronous - Messaging service - kafka,rabbitmq
+
+
+Service Oriented architecture
+- Reusing the service of some application or data sharing is there
+- have services that Communicate with each other.
+- Does not serve a business purpose

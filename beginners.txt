@@ -1,0 +1,36 @@
+Hoisting
+ - Accessing variables before declaration
+ - Variables and functions declaration are moved to the top of the scope
+ - the built-in behavior of the language through which declarations of functions, variables, and classes 
+   are moved to the top of their scope – all before code execution
+
+ var a = 10;  ---- made to -----      var a;
+                                      a = 10
+
+Not defined vs undefined
+Not exists     Exists but has no value
+
+Types in JS
+- Primitve - string,number,null,undefined,boolean,bigint   -- When copied gives real value
+- Reference  -- (),{},[] -- All those values when copied don't pass the real value but instead they give a Reference    
+                            of the real value
+
+    var a = [1,2,3,4]
+    var b = a;
+    // causes reference transfer to b ,shallow copy
+
+
+Arrays
+
+    let arr = [1,2,3,4]
+    arr.unshift(0)
+    //[ 0, 1, 2, 3, 4 ] //adds value to the front
+
+    arr.shift()  // removes from front
+    // [ 1, 2, 3, 4 ]
+
+    arr.splice(1,2)
+    //removes start to end   --- [ 1, 4 ]
+
+    arr.slice(1)  -- [4] 
+    // slices that many values from front

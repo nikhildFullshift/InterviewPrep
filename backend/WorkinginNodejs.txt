@@ -1,0 +1,43 @@
+# nodejs -- runtime env
+
+Chrome uses  --V8
+Mozilla -- Spider Monkey
+Edge -- Chakra
+
+
+JS --- v8--- machine code
+
+
+# How Node Works
+
+v8 + libuv(written in c++ ,allows async and i/o operations) 
+Nodejs is single threaded
+
+It takes requests and sends to workers ,then sends whose reponse comes.
+It uses os/kernel level threads to do tasks parallely
+
+#  LIBUV
+
+1. Event Loop -- (Decides which to execute after what)
+    Call stack -- line by line execution
+    Callback queue --- callback functions
+    Micro-task queue -- promises come here
+    Browser/Node api queue   -- async functions come here
+
+    Priority of microtask > callback queue
+
+2. Thread Pool (4 threads by default -- max(128) threads)
+    Event Loop sends heavy task to thread pool (I/O ,network calls)
+
+
+REPL in Nodejs
+Read - Reads user input and parses the input into js data structure
+Eval - Evaluates the data structure
+Print - Prints the result
+Loop - Loops the above ,until crtl -c has been hit twice
+
+Control Flow functions ,runs between async function calls
+1. Control the order
+2. Collects the data
+3. Handles Concurrency
+4. Call the next step in the program
